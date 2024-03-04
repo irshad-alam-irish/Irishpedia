@@ -2,7 +2,7 @@ import React, { useContext, useRef } from 'react'
 import { PostList } from '../Store/Post-List-Store';
 
 
-function CreatePost() {
+function CreatePost({setSelectedTab}) {
     const{addPost}=useContext(PostList)
     const userIdElement=useRef();
     const postTitleElement=useRef();
@@ -25,6 +25,7 @@ function CreatePost() {
         tagsElement.current.value="";
 
         addPost(userId, postTitle, postBody, reactions,tags)
+        setSelectedTab("Home")
     }
     return (
         <form className='form-container ' onSubmit={handelSubmit}>
@@ -49,7 +50,7 @@ function CreatePost() {
                 <input id='tags' type="text" ref={tagsElement}className="form-control" placeholder='Please enter your tags using space'  />
             </div>
             
-            <button type="submit" className="btn btn-primary">Post</button>
+            <button   type="submit" className="btn btn-primary"  >Post</button>
         </form>
     )
 }
