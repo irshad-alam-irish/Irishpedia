@@ -4,13 +4,15 @@
   display: flex;
   margin: 0;
   padding: 0;
+  height: 100vh;
   
 }
 .content{
   width: 100%;
+  
 }
 .app-sidebar{
-  min-height: 100vh;
+  height: 100vh;
   width: 10%;
   
 }
@@ -29,7 +31,7 @@
   display: flex;
   margin: 30px auto;
   width: 400px;
-  min-width: 30rem;
+
   
 }
 
@@ -53,4 +55,37 @@
 }
 .like{
   font-size: 25px;
+}
+.footers{
+  bottom: 0 !important;
+}
+
+@media screen and (max-width: 800px){
+
+.app-container{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  
+}.app-sidebar{
+  height: 200px !important;
+  width: 100% !important;
+  display: flex !important;
+
+  
+}
+.post-card{
+
+width: 350px;
+
+}
+.mobDropdown{
+  display: none;
+}
+.mobHeader{
+  width: 100% !important;
+  margin-right: 0 !important;
+}
+
 }
